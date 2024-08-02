@@ -6,11 +6,11 @@ import os
 user_input_side = "WHITE"
 user_input_color = "w"  # or "b" for black's turn
 
-board = nameAllTiles(user_input_side, "input1.png")
+board = nameAllTiles(user_input_side, r"Inputs/input1.png")
 printAllTiles(board)
 fen = convert_to_FEN(board, user_input_color)
 move = FENtoMove(fen)
 
-
+print(f"FEN: {fen}")
 print("The best move is: " + move)
 

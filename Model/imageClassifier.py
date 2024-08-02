@@ -14,13 +14,13 @@ def imageClassifier(image_path):
     TF_MODEL_FILE_PATH = 'Model/model.tflite' # The default path to the saved TensorFlow Lite model
     interpreter = tf.lite.Interpreter(model_path=TF_MODEL_FILE_PATH)
     classify_lite = interpreter.get_signature_runner('serving_default')
-    predictions_lite = classify_lite(rescaling_1_input=img_array)['dense_1']
+    predictions_lite = classify_lite(sequential_1_input=img_array)['outputs']
     score_lite = tf.nn.softmax(predictions_lite)
     
     # Alternative methods of displaying pieces0
     #class_names = ['black_bishop', 'black_king', 'black_knight', 'black_pawn', 'black_queen', 'black_rook', 'white_bishop', 'white_king', 'white_knight', 'white_pawn', 'white_queen', 'white_rook']
-    class_names = ['Bb', 'Bk', 'Bn', 'Bp', 'Bq', 'Br', 'Wb', 'Wk', 'Wn', 'Wp', 'Wq', 'Wr']
-
+    #class_names = ['Bb', 'Bk', 'Bn', 'Bp', 'Bq', 'Br', 'Wb', 'Wk', 'Wn', 'Wp', 'Wq', 'Wr']
+    class_names = ['b ', 'k ', 'n ', 'p ', 'q ', 'r ', 'B ', 'K ', 'N ', 'P ', 'Q ', 'R ']
     #class_names = ['Black Bishop', 'Black King', 'Black Knight', 'Black Pawn', 'Black Queen', 'Black Rook', 'White Bishop', 'White King', 'White Knight', 'White Pawn', 'White Queen', 'White Rook']
     # RETURN RESULT (class, confidence)
     return class_names[np.argmax(score_lite)], 100 * np.max(score_lite)

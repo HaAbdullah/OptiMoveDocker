@@ -55,7 +55,7 @@ def cropper(path):
         cropped_image = cv2.resize(cropped_image, (512, 512))
         cv2.imwrite('output.jpg', cropped_image)
         
-        # Display images at different steps
+        # # Display images at different steps
         # cv2.imshow('Grayscale Image', gray)
         # cv2.waitKey(0)
         # cv2.imshow('Blurred Image', blurred)
@@ -69,3 +69,6 @@ def cropper(path):
         # cv2.destroyAllWindows()
         
         print("cropping complete!")
+        
+        
+        

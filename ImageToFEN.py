@@ -97,12 +97,16 @@ def nameAllTiles(viewing_side, image_path):
     return viewing_board
 
 def convert_to_FEN(viewing_board, active_color):
+    # piece_mapping = {
+    #     'Wr': 'R', 'Wn': 'N', 'Wb': 'B', 'Wq': 'Q', 'Wk': 'K', 'Wp': 'P',
+    #     'Br': 'r', 'Bn': 'n', 'Bb': 'b', 'Bq': 'q', 'Bk': 'k', 'Bp': 'p',
+    #     'W': '1', 'B': '1'
+    # }
     piece_mapping = {
-        'Wr': 'R', 'Wn': 'N', 'Wb': 'B', 'Wq': 'Q', 'Wk': 'K', 'Wp': 'P',
-        'Br': 'r', 'Bn': 'n', 'Bb': 'b', 'Bq': 'q', 'Bk': 'k', 'Bp': 'p',
-        'W': '1', 'B': '1'
+    'R': 'R', 'N': 'N', 'B': 'B', 'Q': 'Q', 'K': 'K', 'P': 'P',
+    'r': 'r', 'n': 'n', 'b': 'b', 'q': 'q', 'k': 'k', 'p': 'p',
+    'W': '1', 'B': '1'
     }
-    
     # Create a 2D array for the board
     board_2d = [['']*8 for _ in range(8)]
     

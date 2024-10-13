@@ -152,5 +152,11 @@ def printAllTiles(board):
         if numOfTiles == 8:
             print()
             numOfTiles = 0
+            
+    # Print array of all tiles
+    # print("[", end='')
+    # for key in board:
+    #     print(" \" " + board[key].strip() + "\"" , end=',')
+    # print("]")
 
 

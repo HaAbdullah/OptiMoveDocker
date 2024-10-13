@@ -53,7 +53,7 @@ def cropper(path):
         
         # resize image to be perfect square
         cropped_image = cv2.resize(cropped_image, (512, 512))
-        cv2.imwrite('output.jpg', cropped_image)
+        cv2.imwrite('Outputs/detected-chess-board.jpg', cropped_image)
         
         # # Display images at different steps
         # cv2.imshow('Grayscale Image', gray)

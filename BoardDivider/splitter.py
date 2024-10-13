@@ -23,7 +23,7 @@ def splitter(path, viewing_side):
     
     cropper.cropper(path)
     
-    img = cv2.imread("output.jpg") #USE THIS IF INDEPENDENT
+    img = cv2.imread("Outputs/detected-chess-board.jpg") #CHANGE THE FILE TO WHAT YOU NEED IF THIS IS INDEPENDENTLY RUN
     # shape = (width, height, channel)
     width = img.shape[0]
     height = img.shape[1]

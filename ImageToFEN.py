@@ -138,7 +138,7 @@ def convert_to_FEN(viewing_board, active_color):
         fen_rows.append(fen_row)
     
     fen = '/'.join(fen_rows)
-    
+    active_color = "w" if active_color == "white" else "b"
     # Add active color, no castling rights, no en passant target, no halfmove clock, and first move
     fen += f' {active_color} - - 0 1'
     

@@ -18,7 +18,8 @@ parameters = {
 }
 
 stockfish = Stockfish(
-    path=r"C:\Users\abdul\All\OptiMove2\stockfish\stockfish-windows-x86-64-avx2.exe",
+    # path=r"C:\Users\abdul\All\OptiMove2\stockfish\stockfish-windows-x86-64-avx2.exe",
+    path="/usr/games/stockfish", #FOR DOCKER
     depth=18,
     parameters=parameters
 )
